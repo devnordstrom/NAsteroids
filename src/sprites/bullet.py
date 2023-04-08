@@ -16,7 +16,7 @@ BULLET_COLOR = RED
 class Bullet(MovableSprite):
     """Class representing bullet fired."""
     
-    def __init__(self, left, top, radius = BULLET_RADIUS, bullet_color = BULLET_COLOR):
+    def __init__(self, left = 0, top = 0, radius = BULLET_RADIUS, bullet_color = BULLET_COLOR):
         self.radius = radius
         diameter = self.radius * 2
         self.color = bullet_color

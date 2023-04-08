@@ -10,6 +10,7 @@ class GasCloud(MovableSprite):
     def __init__(self, x, y, width, height):
 
         self.attractable = False
+        self.temporary = True
         self.transparent = True
         self.toxic = True   # Means that the player will be killed upon touching this but other objects can pass it
         

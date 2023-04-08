@@ -5,8 +5,8 @@ import math
 import pygame
 import pygame.sprite
 from pygame.locals import *
-from constants import *
 import os
+from .constants import *
 
 # For now this is placed in the folder below this
 IMAGE_BASE_PATH = "src/data/"

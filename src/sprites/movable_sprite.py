@@ -100,7 +100,7 @@ class MovableSprite(pygame.sprite.Sprite):
         self.a_acc_angle = newVector[1]
         
     def set_pos(self, x, y):
-        # Weird, hard to see if the x and y are the topleft corner or the center coords.
+        # TODO this function is weird...
         self.x = x
         self.y = y
 
@@ -121,7 +121,7 @@ class MovableSprite(pygame.sprite.Sprite):
         self.mask = pygame.mask.from_surface(self.image)
 
     def hit(self):
-        pass
+        return 0
     
     def rotate(self):
         """Support for rotating classes in subclasses possible."""

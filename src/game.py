@@ -22,6 +22,8 @@ from .sprites.asteroid import Asteroid
 from .sprites.slime_blob import SlimeBlob
 from .sprites.space_ship import SpaceShip
 from .sprites.bullet import Bullet
+from .sprites.vortex_hole import VortexHole
+
 
 #from .sprites import asteroid.Asteroid as Asteroid
 #from .sprites import slime_blob.SlimeBlob as SlimeBlob
@@ -39,6 +41,13 @@ from .text_message import *
 from .sound_box import *
 
 # constants
+PLAYER_START_X = WINDOWWIDTH//2
+PLAYER_START_Y = WINDOWHEIGHT//2
+PLAYER_DIAMETER = 20
+PLAYER_STARTING_LIVES = 8
+
+PLAYER_RESPAWN_TIME_MS = 5 * 1000
+
 GAME_INFO_FONT_SIZE = 30
 GAME_INFO_BIG_FONT_SIZE = 60
 GAME_INFO_MARGINS = 20

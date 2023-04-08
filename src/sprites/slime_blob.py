@@ -3,6 +3,7 @@ import pygame.sprite
 from pygame.locals import *
 import math
 from ..constants import *
+from ..functions import *
 from .movable_sprite import MovableSprite
 
 
@@ -34,13 +35,9 @@ class SlimeBlob(MovableSprite):
         # Creates the slime's image.        
         self.image = pygame.Surface([diameter, diameter])
         self.image.set_colorkey(BACKGROUND_COLOR)                
-        #pygame.draw.circle(self.image, self.color, (self.radius, self.radius), self.radius)
 
-
-        self.image = pygame.image.load(sprite_image).convert()
+        self.image = load_image(sprite_image)  
         self.image = pygame.transform.scale(self.image, (diameter, diameter))
-
-        
         self.image.set_colorkey(BACKGROUND_COLOR)
         
         # Calls parent constructor

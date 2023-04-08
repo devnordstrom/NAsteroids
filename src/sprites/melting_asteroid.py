@@ -1,5 +1,5 @@
 import pygame
-from .. import constants
+from ..constants import *
 from .movable_sprite import MovableSprite
 
 MELTING_ASTEROID_HP = 5
@@ -19,8 +19,8 @@ class MeltingAsteroid(MovableSprite):
         self.rect = Rect(0, 0, diameter, diameter)
         self.rect.center = (x, y)
 
-        self.image = self.org_image
-        self.image = pygame.transform.scale(self.image, (diameter, diameter))
+        self.org_image = load_image(sprite_image)
+        self.image = pygame.transform.scale(self.org_image, (diameter, diameter))
         self.image.set_colorkey(constants.BACKGROUND_COLOR)
 
         self.redrawImage()

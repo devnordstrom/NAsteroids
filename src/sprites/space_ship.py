@@ -5,10 +5,6 @@ from .movable_sprite import MovableSprite
 from .bullet import Bullet
 
 # Constants
-PLAYER_START_X = WINDOWWIDTH//2
-PLAYER_START_Y = WINDOWHEIGHT//2
-PLAYER_DIAMETER = 20
-
 PLAYER_ROTATE_SPEED = 5
 PLAYER_ACC = 0.15
 PLAYER_BREAK_DEACC = -0.25
@@ -16,9 +12,11 @@ PLAYER_MAX_SPEED = 10
 PLAYER_COLOR = (153, 0, 0, 0.7)
 PLAYERWIDTH = 50
 
-PLAYER_RESPAWN_TIME_MS = 5 * 1000
 PLAYER_SPAWN_SAFE_TIME_MS = 3 * 1000
-PLAYER_STARTING_LIVES = 8
+
+ROTATE_CLOCKWISE = 1
+ROTATE_NONE = 0
+ROTATE_COUNTER_CLOCKWISE = -1
 
 class SpaceShip(MovableSprite):
     """Class representing a spaceship, should perhaps inherit from MovableSprite."""
@@ -131,11 +129,13 @@ class SpaceShip(MovableSprite):
 
         self.set_angle(new_angle, False)       
         
-    def fire_bullet(self):
-        bullet_x = self.rect.centerx - BULLET_RADIUS
-        bullet_y = self.rect.centery - BULLET_RADIUS
+    def fire_bullet(self):        
+        bullet = Bullet()
+
+        bullet_x = self.rect.centerx - bullet.radius
+        bullet_y = self.rect.centery - bullet.radius
         
-        bullet = Bullet(bullet_x, bullet_y)
+        bullet.set_pos(bullet_x, bullet_y)
         bullet.parent = self
         bullet.fire(self.angle)
         return bullet

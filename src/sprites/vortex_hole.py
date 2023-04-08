@@ -1,6 +1,8 @@
+import math
 import pygame
 from ..constants import *
 from .movable_sprite import MovableSprite
+
 
 # Constants
 VORTEX_HOLE_RADIUS = 20

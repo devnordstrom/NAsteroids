@@ -16,8 +16,8 @@ import pygame.mixer
 import os
 import glob
 from pygame.locals import *
-from constants import *
-from functions import *
+from .constants import *
+from .functions import *
 
 SOUND_BASE_PATH = "src/data/sound/";
 

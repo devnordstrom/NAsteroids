@@ -1,6 +1,6 @@
 """Class representing a text message to be displayed on the screen"""
 
-from functions import get_millis
+from .functions import get_millis
 
 TEXT_DISPLAY_TIME_MS = 3 * 1000
 TEXT_COLOR = (0, 0, 0)
